@@ -217,5 +217,16 @@ function finish(){
 function restart(){cur=0;ans=new Array(Q.length).fill(null);$('result').style.display='none';$('qcard').style.display='';render();window.scrollTo({top:0,behavior:'smooth'});}
 render();
 </script>
+<script>
+// تسجيل عامل الخدمة — يعمل فقط على http(s) وفي النافذة العليا (ليس داخل إطار المعاينة)
+(function(){try{
+if(!('serviceWorker' in navigator))return;
+if(window.self!==window.top)return;
+if(location.protocol==='file:')return;
+if(new URLSearchParams(location.search).has('nosw'))return;
+if(/\/(login|signin|oauth|auth)(\/|$|\?)/i.test(location.pathname))return;
+window.addEventListener('load',function(){navigator.serviceWorker.register('./sw.js',{scope:'./'}).catch(function(e){console.warn('SW register failed:',e);});});
+}catch(e){}})();
+</script>
 </body>
 </html>

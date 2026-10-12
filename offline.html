@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>دون اتصال | الوجيز في أحكام الصلاة</title>
+<link rel="manifest" href="./manifest.webmanifest">
+<meta name="theme-color" content="#0f6e5e">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon-180.png">
+<style>body{margin:0;font-family:'Tajawal',system-ui,sans-serif;background:#f7f5ef;color:#1e2a26;line-height:2}.wrap{max-width:640px;margin:8vh auto;padding:1rem}.card{background:#fff;border:1px solid #e8e2d3;border-radius:18px;padding:2rem;text-align:center;box-shadow:0 10px 30px rgba(15,110,94,.08)}h1{color:#0b3d35}.btn{display:inline-block;border:1px solid #e8e2d3;border-radius:999px;padding:.6rem 1.2rem;margin:.3rem;font-weight:700;color:#0f6e5e;text-decoration:none}.btn.primary{background:#0f6e5e;color:#fff;border-color:#0f6e5e}</style>
+</head>
+<body>
+<div class="wrap"><div class="card">
+<div style="font-size:3rem">📡</div>
+<h1>أنت دون اتصال بالإنترنت</h1>
+<p>الصفحات المحفوظة متاحة. اختر صفحة محفوظة أو أعد المحاولة عند عودة الاتصال.</p>
+<p>
+<a class="btn primary" href="./index.html">🏠 الرئيسية (محفوظة)</a>
+<a class="btn" href="./quiz.html">📝 الاختبار (محفوظ)</a>
+<a class="btn" href="./book.html">📖 الكتاب (محفوظ)</a>
+</p>
+<p><button class="btn" onclick="location.reload()">↻ إعادة المحاولة</button></p>
+</div></div>
+<script>
+(function(){try{
+if(!('serviceWorker' in navigator))return;
+if(window.self!==window.top)return;
+if(location.protocol==='file:')return;
+if(new URLSearchParams(location.search).has('nosw'))return;
+window.addEventListener('load',function(){navigator.serviceWorker.register('./sw.js',{scope:'./'}).catch(function(e){console.warn('SW register failed:',e);});});
+}catch(e){}})();
+</script>
+</body>
+</html>
