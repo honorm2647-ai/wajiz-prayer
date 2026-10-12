@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>اختبار الوجيز في أحكام الصلاة | أسئلة من الكتاب مع الدليل</title>
+<meta name="description" content="أسئلة اختيار من متعدد عن كتاب الوجيز في أحكام الصلاة مع الدليل من الكتاب نفسه">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f7f5ef; --card:#fff; --ink:#1e2a26; --muted:#6b7a75;
+  --brand:#0f6e5e; --brand2:#14957e; --gold:#c49a3c; --gold-light:#fdf6e3;
+  --line:#e8e2d3; --shadow:0 10px 30px rgba(15,110,94,.08); --radius:18px;
+  --ok:#0f7a4d; --bad:#b4232a;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:'Tajawal',system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.9}
+.topbar{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.93);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.topbar-inner{max-width:1000px;margin:auto;padding:.7rem 1.2rem;display:flex;align-items:center;gap:.8rem}
+.logo{width:42px;height:42px;border-radius:13px;display:grid;place-items:center;background:linear-gradient(135deg,var(--brand),var(--brand2));color:#fff;font-weight:800;font-size:21px}
+.brand-title{font-weight:800}.brand-title small{display:block;font-weight:400;color:var(--muted);font-size:.8rem}
+.btn{border:1px solid var(--line);background:#fff;border-radius:999px;padding:.5rem 1rem;cursor:pointer;font-family:inherit;font-weight:700;color:var(--brand);text-decoration:none;display:inline-block}
+.btn.primary{background:var(--brand);color:#fff;border-color:var(--brand)}
+.btn:disabled{opacity:.5;cursor:not-allowed}
+.hero{background:linear-gradient(180deg,#0b3d35,#0f6e5e);color:#fff}
+.hero-inner{max-width:1000px;margin:auto;padding:2rem 1.2rem}
+.hero h1{font-family:'Amiri',serif;margin:.4rem 0;font-size:clamp(1.7rem,4vw,2.5rem)}
+.hero p{color:#e6f3ef;margin:.3rem 0}
+.wrap{max-width:1000px;margin:auto;padding:1.3rem 1.2rem 4rem}
+.bar{background:#fff;border:1px solid var(--line);border-radius:14px;padding:.8rem 1rem;display:flex;align-items:center;gap:1rem;box-shadow:var(--shadow);margin-bottom:1rem;flex-wrap:wrap}
+.progress-track{flex:1;min-width:160px;height:10px;background:#eee9d8;border-radius:999px;overflow:hidden}
+.progress-fill{height:100%;width:0;background:linear-gradient(to left,var(--gold),var(--brand2));transition:width .3s}
+.score{font-weight:800;color:var(--brand)}
+.qcard{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:1.5rem}
+.cat{display:inline-block;font-size:.8rem;background:#eef7f4;border:1px solid #cfe7e0;color:var(--brand);border-radius:999px;padding:.1rem .8rem;font-weight:700;margin-bottom:.5rem}
+.qtext{font-size:1.25rem;font-weight:800;margin:.4rem 0 1rem}
+.opts{display:grid;gap:.6rem}
+.opt{border:1.5px solid var(--line);border-radius:12px;padding:.75rem 1rem;cursor:pointer;background:#fff;display:flex;gap:.7rem;align-items:flex-start;text-align:right;width:100%;font-family:inherit;font-size:1rem;line-height:1.8}
+.opt:hover{border-color:var(--brand2);background:#f3faf8}
+.opt .k{flex-shrink:0;width:30px;height:30px;border-radius:50%;background:#0b3d35;color:#fff;display:grid;place-items:center;font-weight:800;font-size:.9rem}
+.opt.correct{border-color:var(--ok);background:#eaf7ef}
+.opt.correct .k{background:var(--ok)}
+.opt.wrong{border-color:var(--bad);background:#fdeeee}
+.opt.wrong .k{background:var(--bad)}
+.opt.locked{cursor:default}
+.feedback{border-radius:12px;padding:.8rem 1rem;margin-top:1rem;display:none}
+.feedback.ok{display:block;background:#eaf7ef;border:1px solid #bfe6cd}
+.feedback.no{display:block;background:#fdeeee;border:1px solid #f3b8b8}
+.dalil{margin-top:.6rem;background:var(--gold-light);border:1px solid #f0dfae;border-right:5px solid var(--gold);border-radius:10px;padding:.7rem 1rem;font-size:.95rem}
+.dalil b{color:#6b5518}
+.nav{display:flex;gap:.6rem;margin-top:1.2rem;flex-wrap:wrap}
+.result{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:1.8rem;text-align:center}
+.big{font-size:3rem;font-weight:800;color:var(--brand);margin:.3rem 0}
+.review{text-align:right;margin-top:1rem;display:grid;gap:.8rem}
+.rev{border:1px solid var(--line);border-radius:12px;padding:.9rem 1rem;background:#fff}
+.rev.ok{border-right:5px solid var(--ok)}.rev.no{border-right:5px solid var(--bad)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:.6rem;margin-top:1rem}
+@media(max-width:700px){.grid2{grid-template-columns:1fr}}
+.stat{background:#f6faf9;border:1px solid #e2efec;border-radius:12px;padding:.6rem}
+.stat b{display:block;font-size:1.4rem;color:var(--brand)}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <div class="topbar-inner">
+    <div class="logo">؟</div>
+    <div class="brand-title">اختبار الوجيز في أحكام الصلاة <small>صفحة منفصلة • اختيار من متعدد • مع الدليل من الكتاب</small></div>
+    <div style="margin-inline-start:auto;display:flex;gap:.5rem">
+      <a class="btn" href="index.html">🏠 الرئيسية</a>
+      <a class="btn primary" href="book.html">📖 قراءة PDF</a>
+    </div>
+  </div>
+</div>
+<header class="hero">
+  <div class="hero-inner">
+    <h1>📝 اختبر فهمك لكتاب الوجيز</h1>
+    <p><strong>24 سؤالًا</strong> من اختيار متعدد تغطي الشروط والأركان والواجبات والسنن والمبطلات ومعاني الأذكار — كل سؤال مع <strong>دليله من الكتاب نفسه</strong> (آية / حديث / نص المؤلف).</p>
+    <p style="font-size:.9rem">طريقة الاختبار: أجب عن سؤال واحد في كل شاشة، ويظهر لك التصحيح والدليل فورًا، وفي النهاية نتيجتك ومراجعة شاملة.</p>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="bar">
+    <span id="counter" style="font-weight:800">السؤال 1 / 24</span>
+    <div class="progress-track"><div class="progress-fill" id="fill"></div></div>
+    <span class="score" id="liveScore">النقاط: 0</span>
+    <button class="btn" id="restartTop" onclick="restart()">↺ إعادة</button>
+  </div>
+
+  <div class="qcard" id="qcard">
+    <span class="cat" id="cat"></span>
+    <div class="qtext" id="qtext"></div>
+    <div class="opts" id="opts"></div>
+    <div class="feedback" id="fb"></div>
+    <div class="nav">
+      <button class="btn" id="prevBtn" onclick="go(-1)">→ السابق</button>
+      <button class="btn primary" id="nextBtn" onclick="go(1)">التالي ←</button>
+      <button class="btn" id="finishBtn" onclick="finish()" style="display:none">🏁 إنهاء وعرض النتيجة</button>
+    </div>
+  </div>
+
+  <div class="result" id="result" style="display:none">
+    <div style="font-size:2.5rem" id="emoji">🎉</div>
+    <h2 style="margin:.2rem 0">نتيجتك في اختبار الوجيز</h2>
+    <div class="big" id="finalScore">0 / 24</div>
+    <div id="msg" style="font-weight:700"></div>
+    <div class="grid2">
+      <div class="stat"><b id="stOk">0</b>إجابات صحيحة</div>
+      <div class="stat"><b id="stNo">0</b>إجابات خاطئة / متروكة</div>
+    </div>
+    <div style="margin-top:1rem;display:flex;gap:.6rem;justify-content:center;flex-wrap:wrap">
+      <button class="btn primary" onclick="restart()">↺ إعادة الاختبار</button>
+      <a class="btn" href="index.html">📖 مراجعة الشرح في الرئيسية</a>
+    </div>
+    <div class="review" id="review"></div>
+  </div>
+</div>
+
+<script>
+const Q = [
+{q:"كم عدد شروط الصلاة في الكتاب؟",cat:"شروط الصلاة",opts:["سبعة","ثمانية","تسعة","عشرة"],a:2,dalil:"ذكر المؤلف أن شروط الصلاة تسعة: الإسلام والعقل والتمييز ودخول الوقت والطهارة من الحدث واجتناب النجاسة وستر العورة واستقبال القبلة والنية.",ref:"الفصل الأول – النوع الأول: شروط الصلاة"},
+{q:"ما الشروط العامة للعبادات ومنها الصلاة؟",cat:"شروط الصلاة",opts:["الطهارة وستر العورة والقبلة","الإسلام والعقل والتمييز","النية والترتيب والطمأنينة","القيام والركوع والسجود"],a:1,dalil:"قسّم المؤلف الشروط إلى: عامة للعبادات وهي ثلاثة (الإسلام، العقل، التمييز)، وخاصة بالصلاة وهي ستة.",ref:"الفصل الأول – تقسيم شروط الصلاة"},
+{q:"ما حدّ التمييز الذي تصح معه الصلاة؟",cat:"شروط الصلاة",opts:["تمام خمس سنين","تمام سبع سنين","تمام عشر سنين","البلوغ"],a:1,dalil:"قال المؤلف: حد التمييز كمال سبع سنين، والدليل حديث: «مروا أولادكم بالصلاة وهم أبناء سبع سنين…».",ref:"الشرط الثالث: التمييز"},
+{q:"ما دليل اشتراط دخول الوقت للصلاة؟",cat:"شروط الصلاة",opts:["﴿ وَثِيَابَكَ فَطَهِّرْ ﴾","﴿ إِنَّ الصَّلَاةَ كَانَتْ عَلَى الْمُؤْمِنِينَ كِتَابًا مَّوْقُوتًا ﴾","﴿ خُذُوا زِينَتَكُمْ عِندَ كُلِّ مَسْجِدٍ ﴾","حديث «إنما الأعمال بالنيات»"],a:1,dalil:"استدل المؤلف للشرط الرابع (دخول الوقت) بقوله تعالى: ﴿ إِنَّ الصَّلَاةَ كَانَتْ عَلَى الْمُؤْمِنِينَ كِتَابًا مَّوْقُوتًا ﴾ [النساء:103].",ref:"الشرط الرابع: دخول الوقت"},
+{q:"أين محل النية وما حكم التلفظ بها؟",cat:"شروط الصلاة",opts:["اللسان والتلفظ واجب","القلب والتلفظ بها بدعة","القلب والتلفظ مستحب","لا تشترط النية"],a:1,dalil:"قال المؤلف في الشرط التاسع: النية محلها القلب، والتلفظ بها بدعة، والدليل حديث: «إنما الأعمال بالنيات…» متفق عليه.",ref:"الشرط التاسع: النية"},
+{q:"ما عورة الرجل في الصلاة؟",cat:"شروط الصلاة",opts:["جميع البدن","ما بين السرة والركبة مع تغطية المنكبين","العورة فقط القبل والدبر","لا عورة للرجل"],a:1,dalil:"قال المؤلف: عورة الرجل ما بين السرة والركبة، ويجب عليه مع هذا تغطية منكبيه.",ref:"الشرط السابع: ستر العورة"},
+{q:"كم عدد فروض الوضوء (أركانه)؟",cat:"الوضوء والغسل",opts:["أربعة","خمسة","ستة","سبعة"],a:2,dalil:"ذكر المؤلف أن فروض الوضوء ستة: غسل الوجه، وغسل اليدين مع المرفقين، ومسح جميع الرأس، وغسل الرجلين مع الكعبين، والترتيب، والموالاة.",ref:"تتمة الحدث – فروض الوضوء"},
+{q:"أي مما يلي من نواقض الوضوء الخمسة؟",cat:"الوضوء والغسل",opts:["مس المرأة","خروج الدم من غير السبيلين","أكل لحم الإبل","القهقهة"],a:2,dalil:"نواقض الوضوء خمسة، منها: أكل لحم الإبل دون مرقها وكبدها وألبانها. أما مس المرأة وخروج الدم من غير السبيلين فلا ينقض على ما رجحه المؤلف.",ref:"نواقض الوضوء"},
+{q:"خروج الريح من قُبُل الرجل أو المرأة: ما حكمه؟",cat:"الوضوء والغسل",opts:["ينقض الوضوء اتفاقًا","لا ينقض على المختار","يوجب الغسل","يبطل الصلاة فقط"],a:1,dalil:"استثنى المؤلف الريح الخارج من القُبُل فقال: لا ينقض الوضوء على المختار.",ref:"الناقض الأول – حاشية المؤلف"},
+{q:"ما الذي يوجب الغسل؟",cat:"الوضوء والغسل",opts:["مس المرأة","نزول المني بلذة والحيض والنفاس والتقاء الختانين","خروج الريح","أكل لحم الإبل"],a:1,dalil:"ذكر المؤلف ستة موجبات للغسل: نزول المني بلذة، والاحتلام، والتقاء الختانين، والحيض، والنفاس، والموت.",ref:"الحدث الأكبر – ما يوجب الغسل"},
+{q:"من كان عليه حدث أكبر: ماذا يحرُم عليه؟",cat:"الوضوء والغسل",opts:["الصيام فقط","الصلاة والطواف ومس المصحف والبقاء في المسجد وقراءة القرآن","البيع والشراء","صلة الرحم"],a:1,dalil:"قال المؤلف: يحرُم على من عليه حدث أكبر خمسة: الصلاة، والطواف بالبيت، ومس المصحف مباشرة، والبقاء في المسجد، وقراءة القرآن (ويُستثنى الحائض والنفساء في القراءة دون المس).",ref:"المحرَّم على من عليه حدث أكبر"},
+{q:"كم عدد أركان الصلاة؟",cat:"الأركان والواجبات",opts:["اثنا عشر","ثلاثة عشر","أربعة عشر","خمسة عشر"],a:2,dalil:"عدّ المؤلف أركان الصلاة أربعة عشر ركنًا: من القيام مع القدرة إلى الترتيب.",ref:"النوع الثاني: أركان الصلاة"},
+{q:"ما حكم من ترك ركنًا من أركان الصلاة سهوًا؟",cat:"الأركان والواجبات",opts:["تصح صلاته ويجبره بسجود السهو","لا تصح ولا تُجبر بسجود السهو بل لا بد من الإتيان به","تبطل طهارته فقط","لا شيء عليه مطلقًا"],a:1,dalil:"قرر المؤلف أن أركان الصلاة أجزاؤها الأساسية التي لا تسقط عمدًا ولا سهوًا، بخلاف الواجبات التي تُجبر بسجود السهو.",ref:"تعريف أركان الصلاة"},
+{q:"كم عدد واجبات الصلاة في الكتاب؟",cat:"الأركان والواجبات",opts:["ثمانية","تسعة","عشرة","أحد عشر"],a:2,dalil:"عدّ المؤلف الواجبات عشرة: من جميع التكبيرات غير تكبيرة الإحرام إلى الصلاة على النبي ﷺ في التشهد الأخير.",ref:"النوع الثالث: واجبات الصلاة"},
+{q:"ما حكم من ترك واجبًا سهوًا؟",cat:"الأركان والواجبات",opts:["تبطل صلاته مطلقًا","تسقط سهوًا وتُجبر بسجود السهو","لا يحتاج لشيء","يعيد الوضوء"],a:1,dalil:"قال المؤلف: الواجبات ليست بمرتبة الأركان، فهي لا تسقط عمدًا، ولكن تسقط سهوًا وتُجبر بسجود السهو.",ref:"تعريف واجبات الصلاة"},
+{q:"ما القدر الواجب من الصلاة على النبي ﷺ في التشهد الأخير؟",cat:"الأركان والواجبات",opts:["لا تجب أصلًا","«اللهم صل على محمد»","قراءة الفاتحة","التسليمة الثانية"],a:1,dalil:"قال المؤلف في الواجب العاشر: القدر الواجب منها: «اللهم صل على محمد»، وصفتها الكاملة الصلاة الإبراهيمية.",ref:"الواجب العاشر"},
+{q:"أي مما يلي من السنن القولية؟",cat:"سنن الصلاة",opts:["رفع اليدين","دعاء الاستفتاح وقول آمين بعد الفاتحة","التورك","الافتراش"],a:1,dalil:"عدّ المؤلف من السنن القولية: دعاء الاستفتاح، والاستعاذة والبسملة سرًا، والتأمين بعد الفاتحة، وقراءة ما تيسر بعد الفاتحة… إلخ.",ref:"النوع الأول: السنن القولية"},
+{q:"في كم موضعًا يُسن رفع اليدين في الصلاة؟",cat:"سنن الصلاة",opts:["موضع واحد","موضعان","أربعة مواضع فقط","في كل تكبيرة"],a:2,dalil:"قال المؤلف: رفع اليدين في أربعة مواضع فقط: مع تكبيرة الإحرام، وعند الركوع، وعند الرفع منه، وبعد القيام من التشهد الأول إلى الثالثة.",ref:"النوع الثاني: السنن الفعلية (1)"},
+{q:"متى يُشرع التورّك ومتى يُشرع الافتراش؟",cat:"سنن الصلاة",opts:["التورك في كل جلوس","الافتراش في جميع الجلسات إلا التشهد الأخير من الثلاثية والرباعية حيث يُشرع التورك","لا فرق بينهما","كلاهما واجب"],a:1,dalil:"قال المؤلف: الافتراش في جميع جلسات الصلاة إلا التشهد الأخير من الثلاثية والرباعية، والتورك في التشهد الأخير منهما.",ref:"السنن الفعلية (13-14)"},
+{q:"أي مما يلي من مكروهات الصلاة؟",cat:"المنهي عنه",opts:["الالتفات بالوجه لغير حاجة والعبث والصلاة مدافعًا للأخبثين","الأكل عمدًا","الكلام عمدًا","ترك ركن عمدًا"],a:0,dalil:"عدّ المؤلف من المكروهات: الالتفات بالوجه لغير حاجة، والتلثم، وافتراش الذراعين، وقراءة القرآن في الركوع والسجود، والعبث، والصلاة مدافعًا للأخبثين أو بحضرة طعام يشتهيه.",ref:"النوع الأول: مكروهات الصلاة"},
+{q:"أي مما يلي محرَّم في الصلاة لكنه لا يُبطلها؟",cat:"المنهي عنه",opts:["الأكل عمدًا","رفع البصر إلى السماء","الكلام الخارج عن الصلاة عمدًا","السلام قبل تمامها عمدًا"],a:1,dalil:"ذكر المؤلف في المحرمات التي لا تُبطل: رفع البصر إلى السماء (والأصح التحريم)، وكشف المنكبين، والمرور بين يدي المصلي وترك السترة، والصلاة في ثوب فيه صور ذوات الأرواح.",ref:"النوع الثاني: محرمات لا تُبطل"},
+{q:"أي مما يلي من مبطلات الصلاة؟",cat:"المنهي عنه",opts:["الالتفات اليسير","الأكل والشرب عمدًا والكلام الخارج عنها عمدًا والضحك","قول آمين","رفع اليدين"],a:1,dalil:"عدّ المؤلف من المبطلات: الأكل والشرب عمدًا، والكلام الخارج عن الصلاة عمدًا، والضحك والقهقهة، وترك ركن أو واجب عمدًا… إلخ.",ref:"النوع الثالث: مبطلات الصلاة (مفسداتها)"},
+{q:"من هم «المغضوب عليهم» و«الضالون» في الفاتحة؟",cat:"معاني الأذكار",opts:["المغضوب عليهم: النصارى، والضالون: اليهود","المغضوب عليهم: اليهود، والضالون: النصارى","كلاهما: المنافقون فقط","لا تفسير لهما"],a:1,dalil:"قال المؤلف: المغضوب عليهم هم الذين عرفوا الحق وتركوه وعلى رأسهم اليهود، والضالون هم الذين تركوا الحق جهلًا وعلى رأسهم النصارى.",ref:"الفصل الرابع – معنى الفاتحة"},
+{q:"ما معنى «إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ»؟",cat:"معاني الأذكار",opts:["نعبدك ونستعين بغيرك أحيانًا","لا نصرف شيئًا من العبادة إلا لك وحدك، ولا نطلب العون إلا منك","العبادة للملائكة والاستعانة للأنبياء","لا عبادة ولا استعانة"],a:1,dalil:"قال المؤلف: ﴿إِيَّاكَ نَعْبُدُ﴾: لا نصرف شيئًا من العبادة إلا لك وحدك، ﴿وَإِيَّاكَ نَسْتَعِينُ﴾: لا نطلب العون إلا منك في قضاء الحاجات وإتمام المأمورات وترك المحظورات.",ref:"الفصل الرابع – معنى الفاتحة"},
+];
+let cur=0, ans=new Array(Q.length).fill(null);
+const $=id=>document.getElementById(id);
+function render(){
+  const total=Q.length, q=Q[cur];
+  $('counter').textContent=`السؤال ${cur+1} / ${total}`;
+  $('fill').style.width=((cur+1)/total*100)+'%';
+  $('cat').textContent=q.cat+` • سؤال ${cur+1}`;
+  $('qtext').textContent=q.q;
+  const box=$('opts'); box.innerHTML='';
+  const letters=['أ','ب','ج','د'];
+  q.opts.forEach((t,i)=>{
+    const b=document.createElement('button');
+    b.className='opt'+(ans[cur]!==null?' locked':'');
+    if(ans[cur]!==null){
+      if(i===q.a) b.classList.add('correct');
+      else if(i===ans[cur]) b.classList.add('wrong');
+    }
+    b.innerHTML=`<span class="k">${letters[i]}</span><span>${t}</span>`;
+    b.onclick=()=>choose(i);
+    box.appendChild(b);
+  });
+  const fb=$('fb'); fb.className='feedback';
+  if(ans[cur]!==null){
+    const ok=ans[cur]===q.a;
+    fb.classList.add(ok?'ok':'no');
+    fb.innerHTML=(ok?'✅ <b>أحسنت! إجابة صحيحة.</b>':'❌ <b>إجابة خاطئة.</b> الصحيح: <b>'+q.opts[q.a]+'</b>')
+      +`<div class="dalil">📖 <b>الدليل من الكتاب:</b> ${q.dalil}<br>🔖 <b>الموضع:</b> ${q.ref}</div>`;
+  }
+  $('prevBtn').disabled=(cur===0);
+  $('nextBtn').style.display=(cur<total-1)?'':'none';
+  $('finishBtn').style.display=(cur===total-1)?'':'none';
+  const s=ans.filter((v,i)=>v===Q[i].a).length;
+  $('liveScore').textContent=`النقاط: ${s}`;
+}
+function choose(i){
+  if(ans[cur]!==null) return;
+  ans[cur]=i; render();
+}
+function go(d){
+  cur=Math.min(Math.max(0,cur+d),Q.length-1); render();
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+function finish(){
+  const ok=ans.filter((v,i)=>v===Q[i].a).length;
+  const no=Q.length-ok;
+  $('qcard').style.display='none';
+  $('result').style.display='block';
+  $('finalScore').textContent=`${ok} / ${Q.length}`;
+  $('stOk').textContent=ok; $('stNo').textContent=no;
+  const pct=ok/Q.length*100;
+  $('emoji').textContent=pct>=90?'🏆':pct>=70?'🎉':pct>=50?'💪':'📖';
+  $('msg').textContent=pct>=90?'ممتاز! إتقان واضح للكتاب.':pct>=70?'جيد جدًا! راجع الأخطاء بالأدلة below.':pct>=50?'مقبول، تحتاج مراجعة الشرح ثم إعادة المحاولة.':'أنصحك بمراجعة الشرح في الصفحة الرئيسية ثم إعادة الاختبار.';
+  const rev=$('review'); rev.innerHTML='<h3>📚 المراجعة الشاملة مع الأدلة:</h3>';
+  Q.forEach((q,i)=>{
+    const good=ans[i]===q.a;
+    const d=document.createElement('div');
+    d.className='rev '+(good?'ok':'no');
+    d.innerHTML=`<b>${i+1}. ${q.q}</b><br>${good?'✅':(ans[i]===null?'⚪ لم تُجب':'❌')} إجابتك: <b>${ans[i]===null?'—':q.opts[ans[i]]}</b> | الصحيح: <b>${q.opts[q.a]}</b><div class="dalil">📖 ${q.dalil}<br>🔖 ${q.ref}</div>`;
+    rev.appendChild(d);
+  });
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+function restart(){cur=0;ans=new Array(Q.length).fill(null);$('result').style.display='none';$('qcard').style.display='';render();window.scrollTo({top:0,behavior:'smooth'});}
+render();
+</script>
+</body>
+</html>

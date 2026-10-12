@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الوجيز في أحكام الصلاة | موقع الكتاب</title>
+<meta name="description" content="الوجيز في أحكام الصلاة: شروطها وأركانها وواجباتها وسننها ومكروهاتها ومبطلاتها - عرض ويب مرتب وسهل القراءة">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f7f5ef;
+  --card:#ffffff;
+  --ink:#1e2a26;
+  --muted:#6b7a75;
+  --brand:#0f6e5e;
+  --brand2:#14957e;
+  --gold:#c49a3c;
+  --gold-light:#fdf6e3;
+  --line:#e8e2d3;
+  --shadow:0 10px 30px rgba(15,110,94,.08);
+  --radius:18px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0; font-family:'Tajawal',system-ui,sans-serif;
+  background:var(--bg); color:var(--ink); line-height:2;
+}
+a{color:var(--brand); text-decoration:none}
+.topbar{
+  position:sticky; top:0; z-index:50;
+  background:rgba(255,255,255,.92); backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--line);
+}
+.topbar-inner{max-width:1200px; margin:auto; padding:.7rem 1.2rem; display:flex; align-items:center; gap:1rem}
+.logo{
+  width:44px; height:44px; border-radius:14px; display:grid; place-items:center;
+  background:linear-gradient(135deg,var(--brand),var(--brand2)); color:#fff; font-weight:800; font-size:22px;
+  box-shadow:var(--shadow);
+}
+.brand-title{font-weight:800; line-height:1.2}
+.brand-title small{display:block; font-weight:400; color:var(--muted); font-size:.82rem}
+.search{margin-inline-start:auto; display:flex; gap:.5rem; align-items:center}
+.search input{
+  border:1px solid var(--line); border-radius:999px; padding:.55rem 1rem; min-width:220px;
+  font-family:inherit; background:#fff;
+}
+.btn{
+  border:1px solid var(--line); background:#fff; border-radius:999px; padding:.5rem .95rem;
+  cursor:pointer; font-family:inherit; font-weight:700; color:var(--brand);
+}
+.btn.primary{background:var(--brand); color:#fff; border-color:var(--brand)}
+.progress{height:3px; background:linear-gradient(to left,var(--gold),var(--brand2)); width:0}
+.hero{
+  background:
+    radial-gradient(800px 300px at 20% 0%, rgba(196,154,60,.22), transparent),
+    radial-gradient(700px 320px at 90% 20%, rgba(20,149,126,.18), transparent),
+    linear-gradient(180deg,#0b3d35 0%, #0f6e5e 100%);
+  color:#fff; overflow:hidden; position:relative;
+}
+.hero::after{
+  content:""; position:absolute; inset:0; opacity:.12;
+  background-image:url("data:image/svg+xml,%3Csvg width='120' height='120' viewBox='0 0 120 120' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23ffffff' stroke-width='1'%3E%3Cpath d='M60 10 L110 60 L60 110 L10 60 Z'/%3E%3Ccircle cx='60' cy='60' r='12'/%3E%3C/g%3E%3C/svg%3E");
+}
+.hero-inner{max-width:1200px; margin:auto; padding:3.2rem 1.2rem 2.6rem; position:relative; z-index:1; display:grid; grid-template-columns:1.2fr .8fr; gap:2rem; align-items:center}
+@media(max-width:900px){.hero-inner{grid-template-columns:1fr}}
+.badge{display:inline-flex; align-items:center; gap:.5rem; background:rgba(255,255,255,.14); border:1px solid rgba(255,255,255,.25); padding:.3rem .9rem; border-radius:999px; font-size:.9rem}
+.hero h1{font-family:'Amiri',serif; font-size:clamp(2.2rem,5vw,3.6rem); margin:.9rem 0 .3rem; line-height:1.4}
+.hero p{color:#e8f5f1; font-size:1.08rem}
+.hero-meta{display:flex; flex-wrap:wrap; gap:.6rem; margin-top:1.2rem}
+.hero-meta span{background:#fff; color:var(--brand); border-radius:999px; padding:.35rem .9rem; font-weight:700; font-size:.9rem}
+.hero-card{
+  background:#fff; color:var(--ink); border-radius:22px; padding:1.4rem; box-shadow:0 20px 60px rgba(0,0,0,.25);
+}
+.hero-card h3{margin:.2rem 0 1rem; color:var(--brand)}
+.toc-list{list-style:none; margin:0; padding:0; display:grid; gap:.55rem}
+.toc-list a{display:flex; justify-content:space-between; align-items:center; background:#f6faf9; border:1px solid #e2efe c; border:1px solid #e2efec; border-radius:12px; padding:.6rem .9rem; color:var(--ink)}
+.toc-list a:hover{border-color:var(--brand2); background:#eef7f4}
+.toc-list b{background:var(--brand); color:#fff; width:28px; height:28px; border-radius:50%; display:grid; place-items:center; font-size:.9rem}
+.layout{max-width:1200px; margin:auto; padding:1.5rem 1.2rem 4rem; display:grid; grid-template-columns:280px 1fr; gap:1.5rem}
+@media(max-width:1000px){.layout{grid-template-columns:1fr}}
+.sidebar{position:sticky; top:78px; align-self:start; background:var(--card); border:1px solid var(--line); border-radius:var(--radius); padding:1rem; box-shadow:var(--shadow); max-height:calc(100vh - 100px); overflow:auto}
+@media(max-width:1000px){.sidebar{position:static; max-height:none}}
+.sidebar h4{margin:.2rem 0 .8rem; color:var(--brand)}
+.sidebar nav{display:grid; gap:.35rem; font-size:.95rem}
+.sidebar nav a{padding:.45rem .7rem; border-radius:10px; color:#33413d}
+.sidebar nav a.active,.sidebar nav a:hover{background:#e9f4f0; color:var(--brand); font-weight:700}
+.content{min-width:0}
+.card{background:var(--card); border:1px solid var(--line); border-radius:var(--radius); padding:1.6rem 1.6rem; margin-bottom:1.3rem; box-shadow:var(--shadow)}
+.card h2{font-family:'Amiri',serif; margin:0 0 .4rem; font-size:1.9rem; color:#0b3d35; display:flex; align-items:center; gap:.7rem}
+.card h2 .num{background:linear-gradient(135deg,var(--gold),#e8c66a); color:#3a2d08; min-width:44px; height:44px; border-radius:14px; display:grid; place-items:center; font-family:'Tajawal'; font-size:1.1rem; font-weight:800}
+.subtitle{color:var(--muted); margin-top:0}
+.kicker{color:var(--brand2); font-weight:800; font-size:.9rem; letter-spacing:.2px}
+.verse{background:var(--gold-light); border:1px solid #f0dfae; border-right:5px solid var(--gold); border-radius:12px; padding:.9rem 1.1rem; margin:1rem 0; font-family:'Amiri',serif; font-size:1.15rem}
+.hadith{background:#eef7f4; border:1px solid #cfe7e0; border-right:5px solid var(--brand); border-radius:12px; padding:.9rem 1.1rem; margin:1rem 0}
+.grid{display:grid; grid-template-columns:repeat(auto-fill,minmax(250px,1fr)); gap:.9rem; margin-top:1rem}
+.item{border:1px solid var(--line); border-radius:14px; padding:1rem 1rem; background:#fff}
+.item h3{margin:0 0 .4rem; font-size:1.05rem; color:var(--brand); display:flex; gap:.6rem; align-items:center}
+.item h3 .n{background:#0b3d35; color:#fff; width:30px; height:30px; border-radius:10px; display:grid; place-items:center; font-size:.95rem; flex-shrink:0}
+.item p{margin:.3rem 0; font-size:.97rem; color:#33413d}
+.tag{display:inline-block; font-size:.78rem; background:#f2efe4; border:1px solid var(--line); border-radius:999px; padding:.05rem .7rem; color:#6b5f2e; font-weight:700}
+ol.clean,ul.clean{padding-inline-start:1.2rem}
+details{border:1px solid var(--line); border-radius:12px; padding:.8rem 1rem; margin:.6rem 0; background:#fff}
+summary{cursor:pointer; font-weight:800; color:#0b3d35}
+.alert{border-radius:12px; padding:.8rem 1rem; margin:1rem 0; font-size:.97rem}
+.alert.green{background:#eef7f4; border:1px solid #cfe7e0}
+.alert.amber{background:#fdf6e3; border:1px solid #f0dfae}
+.alert.red{background:#fef1f1; border:1px solid #f5c2c2}
+.steps{counter-reset:step; list-style:none; padding:0; margin:1rem 0; display:grid; gap:.7rem}
+.steps li{background:#fbfcfa; border:1px solid var(--line); border-radius:12px; padding:.8rem 1rem .8rem 1rem; position:relative; padding-inline-start:3.4rem}
+.steps li::before{counter-increment:step; content:counter(step); position:absolute; inset-inline-start:.9rem; top:.9rem; width:32px; height:32px; border-radius:50%; background:var(--brand); color:#fff; display:grid; place-items:center; font-weight:800}
+.footer{background:#0b3d35; color:#d9ece8; padding:2.2rem 1.2rem; margin-top:1rem}
+.footer-inner{max-width:1200px; margin:auto; display:grid; grid-template-columns:1.2fr .8fr; gap:1.5rem}
+@media(max-width:800px){.footer-inner{grid-template-columns:1fr}}
+.fab{position:fixed; bottom:18px; inset-inline-start:18px; display:grid; gap:.6rem; z-index:60}
+.fab button{width:48px; height:48px; border-radius:50%; border:1px solid var(--line); background:#fff; box-shadow:var(--shadow); cursor:pointer; font-size:20px}
+mark{background:#fff3b0; padding:0 .3rem; border-radius:4px}
+.print-note{font-size:.9rem; color:var(--muted)}
+@media print{.topbar,.sidebar,.fab,.search,.hero-card{display:none!important} .layout{grid-template-columns:1fr} body{background:#fff}}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="topbar-inner">
+    <div class="logo">ص</div>
+    <div class="brand-title">الوجيز في أحكام الصلاة <small>عرض ويب مرتب • شروط • أركان • واجبات • سنن • مبطلات</small></div>
+    <div class="search">
+      <input id="q" type="search" placeholder="ابحث في الكتاب… مثال: الوضوء، التشهد">
+      <button class="btn" onclick="window.print()">طباعة</button>
+      <a class="btn primary" href="quiz.html">📝 الاختبار</a>
+      <a class="btn primary" href="book.html">📖 قراءة PDF</a>
+    </div>
+  </div>
+  <div class="progress" id="progress"></div>
+</div>
+
+<header class="hero">
+  <div class="hero-inner">
+    <div>
+      <span class="badge">🕌 سلسلة المتون العلمية (4) • الطبعة الأولى 1443هـ - 2021م</span>
+      <h1>الوجيز في أحكام الصلاة</h1>
+      <p><strong>شروطها وأركانها وواجباتها وسننها ومكروهاتها ومبطلاتها</strong><br>
+      كتاب مختصر على القول الراجح بالدليل، ينفع المبتدئين وعموم المسلمين، بعيدًا عن الأقوال الضعيفة والمسائل الخلافية المشتتة.</p>
+      <p style="font-size:.98rem">تأليف: <strong>عبد الرحمن بن فهد الودعان الدوسري</strong> — إمام وخطيب جامع المديهيم بالحمراء، الرياض</p>
+      <div class="hero-meta">
+        <span>✔ 9 شروط</span><span>✔ 14 ركنًا</span><span>✔ 10 واجبات</span><span>✔ سنن قولية وفعلية</span><span>✔ مبطلات ومكروهات</span>
+      </div>
+      <div style="margin-top:1rem;display:flex;gap:.6rem;flex-wrap:wrap">
+        <a class="btn primary" href="quiz.html" style="background:#fff;color:var(--brand);border-color:#fff">📝 ابدأ اختبار الكتاب (صفحة منفصلة + الدليل)</a>
+      </div>
+    </div>
+    <aside class="hero-card" aria-label="فهرس سريع">
+      <h3>📖 فهرس الكتاب</h3>
+      <div class="toc-list">
+        <a href="#intro"><span>المقدمة والتمهيد</span><b>0</b></a>
+        <a href="#shurut"><span>شروط الصلاة + أحكام الحدث والوضوء</span><b>1</b></a>
+        <a href="#arkan"><span>أركان الصلاة</span><b>2</b></a>
+        <a href="#wajibat"><span>واجبات الصلاة</span><b>3</b></a>
+        <a href="#sunan"><span>سنن الصلاة القولية والفعلية</span><b>4</b></a>
+        <a href="#manhi"><span>المنهي عنه: مكروهات ومحرمات ومبطلات</span><b>5</b></a>
+        <a href="#adhkar"><span>معاني أذكار الصلاة</span><b>6</b></a>
+      </div>
+    </aside>
+  </div>
+</header>
+
+<div class="layout">
+  <aside class="sidebar">
+    <h4>التنقل في الكتاب</h4>
+    <nav id="sideNav">
+      <a href="#intro">المقدمة وأهمية الصلاة</a>
+      <a href="#shurut">أولًا: شروط الصلاة التسعة</a>
+      <a href="#wudu">تتمة: أحكام الحدث والوضوء والغسل</a>
+      <a href="#arkan">ثانيًا: أركان الصلاة الأربعة عشر</a>
+      <a href="#wajibat">ثالثًا: واجبات الصلاة</a>
+      <a href="#sunan">الفصل الثاني: سنن الصلاة</a>
+      <a href="#manhi">الفصل الثالث: المنهي عنه في الصلاة</a>
+      <a href="#adhkar">الفصل الرابع: معاني الأذكار</a>
+      <a href="#khatima">الخاتمة والتحميل</a>
+      <a href="quiz.html" style="background:#0f6e5e;color:#fff;font-weight:800;text-align:center">📝 صفحة الاختبار (منفصلة) ←</a>
+    </nav>
+    <hr style="border:0;border-top:1px solid var(--line); margin:1rem 0">
+    <div class="print-note">💡 اضغط على أي عنوان فرعي لفتح تفاصيله. استخدم البحث أعلى الصفحة للوصول السريع.</div>
+  </aside>
+
+  <main class="content" id="mainContent">
+
+    <section class="card" id="intro">
+      <div class="kicker">المقدمة • التمهيد</div>
+      <h2><span class="num">0</span> مقدمة المؤلف وأهمية الصلاة</h2>
+      <p class="subtitle">لماذا كُتب هذا المختصر؟ ولمن؟</p>
+      <p>الحمد لله وحده، وصلى الله على من لا نبي بعده، وعلى آله وصحبه وسلم تسليمًا كثيرًا، أما بعد: فهذا كتاب <strong>(الوجيز في أحكام الصلاة)</strong> ذكر فيه المؤلف ما يتعلق بالصلاة مما يلزم لها وفيها، وما يُنهى عنه فيها على سبيل الاختصار، وعلى ما هو الراجح بالدليل عند المحققين من العلماء.</p>
+      <div class="alert green">🎯 <strong>الغرض:</strong> إفادة طائفتين: <strong>الطلاب المبتدئون</strong> و<strong>عموم المسلمين</strong>، بشرح القضايا المهمة على القول الراجح بعيدًا عن الأقوال الضعيفة والمرجوحة التي تشتت الأذهان.</div>
+      <div class="verse">﴿ وَأَقِيمُوا الصَّلَاةَ وَآتُوا الزَّكَاةَ وَارْكَعُوا مَعَ الرَّاكِعِينَ ﴾ [البقرة: 43]</div>
+      <div class="hadith">قال رسول الله ﷺ: <strong>«بُنِيَ الإسلامُ على خمس: شهادةِ أن لا إله إلا الله وأن محمدًا رسول الله، وإقامِ الصلاة، وإيتاءِ الزكاة، والحج، وصومِ رمضان»</strong> متفق عليه.</div>
+      <p>الصلاة <strong>أعظم الواجبات بعد التوحيد</strong>، وهي الركن الثاني من أركان الإسلام، وعمود الإسلام. والصلوات الخمس فرض على كل مسلم بالغ عاقل. وقد جعل الشرع لها أحكامًا كثيرة: شروطًا وأركانًا وواجبات وسننًا ومبطلات ومكروهات، وهذا المختصر يبين أهم ما يتعلق بها في أربعة فصول:</p>
+      <div class="grid">
+        <div class="item"><h3><span class="n">1</span> ما يلزم للصلاة وفيها</h3><p>الشروط والأركان والواجبات.</p></div>
+        <div class="item"><h3><span class="n">2</span> ما يُشرع فيها من غير إلزام</h3><p>السنن والمستحبات القولية والفعلية.</p></div>
+        <div class="item"><h3><span class="n">3</span> ما يُنهى عنه فيها</h3><p>المكروهات والمحرمات والمبطلات.</p></div>
+        <div class="item"><h3><span class="n">4</span> معاني أذكار الصلاة</h3><p>فهم ما تقوله في صلاتك من دعاء وتشهد وفاتحة.</p></div>
+      </div>
+    </section>
+
+    <section class="card" id="shurut">
+      <div class="kicker">الفصل الأول • النوع الأول</div>
+      <h2><span class="num">1</span> شروط الصلاة التسعة</h2>
+      <p class="subtitle">شروط الصحة — لا تصح الصلاة إلا بها — تنقسم إلى عامة وخاصة</p>
+      <div class="alert amber">📌 <strong>قاعدة:</strong> الشرط ما يلزم من عدمه العدم، ولا يلزم من وجوده وجود ولا عدم. فمن فقد شرطًا لم تصح صلاته.</div>
+      <h3>أ) الشروط العامة للعبادات (3)</h3>
+      <div class="grid">
+        <div class="item"><h3><span class="n">1</span> الإسلام</h3><p>فلا تصح الصلاة من الكافر.</p><div class="verse" style="font-size:.95rem">﴿ وَقَدِمْنَا إِلَىٰ مَا عَمِلُوا مِنْ عَمَلٍ فَجَعَلْنَاهُ هَبَاءً مَّنثُورًا ﴾ [الفرقان:23]</div></div>
+        <div class="item"><h3><span class="n">2</span> العقل</h3><p>فلا تصح من المجنون. قال ﷺ: <strong>«رُفع القلم عن ثلاثة: عن النائم حتى يستيقظ، وعن الصبي حتى يحتلم، وعن المجنون حتى يعقل»</strong>.</p></div>
+        <div class="item"><h3><span class="n">3</span> التمييز</h3><p>فلا تصح من الصغير الذي لم يميز، وحد التمييز: <strong>تمام سبع سنين</strong>. قال ﷺ: <strong>«مروا أولادكم بالصلاة وهم أبناء سبع سنين، واضربوهم عليها وهم أبناء عشر، وفرقوا بينهم في المضاجع»</strong>.</p></div>
+      </div>
+      <h3 style="margin-top:1.2rem">ب) الشروط الخاصة بالصلاة (6)</h3>
+      <div class="grid">
+        <div class="item"><h3><span class="n">4</span> دخول الوقت</h3><p>فلا تصح قبله. <span class="tag">دليل</span></p><div class="verse" style="font-size:.95rem">﴿ إِنَّ الصَّلَاةَ كَانَتْ عَلَى الْمُؤْمِنِينَ كِتَابًا مَّوْقُوتًا ﴾ [النساء:103]</div></div>
+        <div class="item"><h3><span class="n">5</span> الطهارة من الحدث</h3><p>أصغر (وضوء) وأكبر (غسل). قال ﷺ: <strong>«لا تُقبل صلاة بغير طهور»</strong> رواه مسلم.</p><p><a href="#wudu">← تفصيل أحكام الحدث والوضوء والغسل</a></p></div>
+        <div class="item"><h3><span class="n">6</span> اجتناب النجاسة</h3><p>في ثلاثة مواضع: <strong>البدن، والثوب الذي يُصلي فيه، والموضع الذي يُصلي عليه</strong>.</p><div class="verse" style="font-size:.95rem">﴿ وَثِيَابَكَ فَطَهِّرْ ﴾ [المدثر:4]</div></div>
+        <div class="item"><h3><span class="n">7</span> ستر العورة</h3><p>قال تعالى: ﴿ خُذُوا زِينَتَكُمْ عِندَ كُلِّ مَسْجِدٍ ﴾. وعورة الرجل: <strong>ما بين السرة والركبة</strong> مع تغطية المنكبين. والمرأة: <strong>كلها عورة إلا وجهها وكفيها وقدميها في الصلاة</strong> ما لم يكن عندها رجال أجانب.</p></div>
+        <div class="item"><h3><span class="n">8</span> استقبال القبلة</h3><p>وهي الكعبة؛ عينها لمن كان قريبًا، وجهتها لمن كان بعيدًا.</p><div class="verse" style="font-size:.95rem">﴿ فَوَلِّ وَجْهَكَ شَطْرَ الْمَسْجِدِ الْحَرَامِ ﴾ [البقرة:144]</div></div>
+        <div class="item"><h3><span class="n">9</span> النية</h3><p>ومحلها <strong>القلب</strong>، والتلفظ بها <strong>بدعة</strong>. قال ﷺ: <strong>«إنما الأعمال بالنيات، وإنما لكل امرئ ما نوى»</strong> متفق عليه.</p></div>
+      </div>
+    </section>
+
+    <section class="card" id="wudu">
+      <div class="kicker">تتمة مهمة • أفردها المؤلف لأهميتها</div>
+      <h2><span class="num">1+</span> أحكام الحدث والوضوء والغسل</h2>
+      <p class="subtitle">الحدث نوعان: أصغر يوجب الوضوء، وأكبر يوجب الغسل</p>
+
+      <details open>
+        <summary>① شروط الوضوء (تسعة)</summary>
+        <ol class="clean">
+          <li>الإسلام</li><li>العقل</li><li>التمييز</li>
+          <li>النية ومحلها القلب، والتلفظ بها بدعة</li>
+          <li>استصحاب حكم النية بأن لا يقطعها أثناء الوضوء</li>
+          <li>إزالة ما يمنع وصول الماء إلى الأعضاء</li>
+          <li>انقطاع موجب الوضوء</li>
+          <li>طهورية الماء</li>
+          <li>دخول وقت الصلاة في حق دائم الحدث</li>
+        </ol>
+        <div class="alert amber">⚠️ <strong>تنبيهات:</strong> لا يجوز الوضوء بماء مغصوب أو مسروق، فإن فعل صح الوضوء مع الإثم. والسنة لمن أراد الوضوء عقب خروج شيء من قبله أو دبره أن يستنجي أو يستجمر أولًا، وليس غسل الفرجين أثناء الوضوء من السنة إلا لمن بال أو تغوط لإزالة أثر النجاسة، أما خروج الريح فلا يُشرع له استنجاء.</div>
+      </details>
+
+      <details open>
+        <summary>② صفة الوضوء الكاملة (خطوة بخطوة)</summary>
+        <ol class="steps">
+          <li>استحضار نية الوضوء أو الطهارة.</li>
+          <li>التسوك قبل الشروع بالسواك أو الفرشاة والمعجون.</li>
+          <li>التسمية في البداية: «بسم الله».</li>
+          <li>غسل الكفين ثلاثًا مع تخليل الأصابع.</li>
+          <li>المضمضة والاستنشاق بغرفة واحدة ثلاث مرات: يتمضمض ويستنشق، ثم يستنثر بيده اليسرى.</li>
+          <li>غسل الوجه ثلاثًا: من منابت شعر الرأس المعتاد إلى الذقن طولًا، ومن الأذن إلى الأذن عرضًا.</li>
+          <li>غسل اليد اليمنى من أطراف الأصابع إلى المرفق ثلاثًا، ثم اليسرى كذلك.</li>
+          <li>مسح الرأس مرة واحدة: يبل يديه بالماء ثم يمسح من مقدم الرأس حتى القفا، ثم يعيدهما إلى المقدم (وأحيانًا يمسح إلى القفا فقط دون رد).</li>
+          <li>مسح الأذنين مرة واحدة: باطنهما بالسبابتين وظاهرهما بالإبهامين.</li>
+          <li>غسل الرجل اليمنى مع الكعبين ثلاثًا، ثم اليسرى كذلك.</li>
+          <li>الذكر بعد الوضوء: «أشهد أن لا إله إلا الله وحده لا شريك له، وأشهد أن محمدًا عبده ورسوله».</li>
+        </ol>
+      </details>
+
+      <details>
+        <summary>③ فروض الوضوء (أركانه الستة التي لا يصح إلا بها)</summary>
+        <ol class="clean">
+          <li>غسل الوجه، والمضمضة والاستنشاق سنة مؤكدة على الراجح (وقيل واجبتان).</li>
+          <li>غسل اليدين مع المرفقين.</li>
+          <li>مسح جميع الرأس (أما مسح الأذنين فسنة عند الأكثر).</li>
+          <li>غسل الرجلين مع الكعبين.</li>
+          <li>الترتيب بين الأعضاء كما في آية المائدة.</li>
+          <li>الموالاة: بأن لا يؤخر غسل عضو حتى يكون بينه وبين الذي قبله فاصل طويل عرفًا.</li>
+        </ol>
+        <div class="verse">﴿ يَا أَيُّهَا الَّذِينَ آمَنُوا إِذَا قُمْتُمْ إِلَى الصَّلَاةِ فَاغْسِلُوا وُجُوهَكُمْ وَأَيْدِيَكُمْ إِلَى الْمَرَافِقِ وَامْسَحُوا بِرُءُوسِكُمْ وَأَرْجُلَكُمْ إِلَى الْكَعْبَيْنِ ﴾ [المائدة:6]</div>
+        <div class="alert red">⛔ من ترك عضوًا أو بعض عضو من أعضاء الوضوء لم يصح وضوؤه.</div>
+      </details>
+
+      <details>
+        <summary>④ سنن الوضوء</summary>
+        <ul class="clean">
+          <li>السواك قبل الابتداء أو عند المضمضة.</li>
+          <li>قول «بسم الله» عند الابتداء.</li>
+          <li>غسل الكفين ثلاثًا في البداية.</li>
+          <li>المضمضة والاستنشاق.</li>
+          <li>غسل الأعضاء ثلاثًا ثلاثًا إلا الرأس فلا يُمسح إلا مرة.</li>
+          <li>التيامن في غسل الأعضاء.</li>
+          <li>تخليل اللحية الكثيفة (أحيانًا).</li>
+          <li>تخليل ما بين أصابع اليدين والرجلين (أحيانًا).</li>
+          <li>الرجوع باليدين إلى مقدم الرأس بعد مسح القفا (أحيانًا).</li>
+          <li>مسح الأذنين مع مسح الرأس.</li>
+        </ul>
+        <div class="alert green">✅ من ترك شيئًا من هذه السنن فلا شيء عليه.</div>
+      </details>
+
+      <details>
+        <summary>⑤ متى يجب الوضوء؟ ومتى يُستحب؟</summary>
+        <p><strong>يُشترط الوضوء لعبادتين:</strong></p>
+        <ol class="clean"><li><strong>الصلاة</strong> فرضًا أو نفلًا، ومنها صلاة الجنازة. أما ما ليس بصلاة فلا تشترط له الطهارة؛ كسجود التلاوة والشكر.</li><li><strong>مس المصحف</strong> مباشرة باليد من غير حائل. ولا تشترط الطهارة لمس الأجهزة والأشرطة والبرامج المتضمنة للقرآن.</li></ol>
+        <p><strong>يُستحب الوضوء لـ:</strong> الطواف بالبيت (وهو متأكد وقد أوجبه الجمهور)، والسعي بين الصفا والمروة في حج أو عمرة، وقراءة القرآن عن ظهر قلب، وذكر الله عمومًا، وسجود التلاوة والشكر.</p>
+      </details>
+
+      <details>
+        <summary>⑥ نواقض الوضوء (مفسداته الخمسة)</summary>
+        <ol class="clean">
+          <li><strong>كل خارج من السبيلين (القبل والدبر)</strong> مثل: البول والغائط والريح والمذي ورطوبة فرج المرأة. (يُستثنى ما أوجب غُسلًا كالمني الدافق والحيض فلا يوجب وضوءًا على الصحيح، وكذلك الريح من قُبل الرجل أو المرأة لا ينقض على المختار).</li>
+          <li><strong>خروج البول والغائط من غير السبيلين</strong> كمن أُجريت له عملية فُتح له فتحة ليخرج منها.</li>
+          <li><strong>النوم العميق المستغرق</strong> الذي يفقد فيه النائم شعوره.</li>
+          <li><strong>زوال العقل أو تغطيته</strong> كالإغماء والسكر والتخدير والجنون العارض.</li>
+          <li><strong>أكل لحم الإبل</strong> دون مرقها وكبدها وألبانها.</li>
+        </ol>
+        <p><strong>أفعال يُسن منها الوضوء ولا يجب:</strong> مس الفرج باليد مباشرة من غير حائل، والقيء قليلًا كان أم كثيرًا.</p>
+        <p><strong>أفعال لا تنقض ولا يُسن منها الوضوء:</strong> مس المرأة بشهوة أو بغيرها، وخروج الدم الكثير من غير السبيلين، ومس الأنثيين (الخصيتين)، والقهقهة في البطن (القرقرة)، ومس النجاسات.</p>
+      </details>
+
+      <details>
+        <summary>⑦ الحدث الأكبر: موجبات الغسل والأغسال المسنونة والمحرَّمات</summary>
+        <p><strong>ما يوجب الغسل (ستة):</strong> نزول المني بلذة بجماع أو ملاعبة أو استمناء؛ والاحتلام (خروج المني من النائم أشعر به أم لم يشعر، فإن رأى في منامه شيئًا واستيقظ فلم ير أثرًا فلا غسل عليه)؛ والتقاء الختانين (إيلاج رأس الذكر في الفرج)؛ والحيض؛ والنفاس؛ والموت (فيجب على من علم به من المسلمين تغسيله، إلا شهيد المعركة).</p>
+        <p><strong>الأغسال المسنونة:</strong> لصلاة الجمعة (وهو آكدها)، ولصلاة العيد، وللإحرام بحج أو عمرة، وعند دخول حرم مكة مُحرمًا، وبعد الإفاقة من الإغماء.</p>
+        <div class="alert red"><strong>يَحرُم على من عليه حدث أكبر خمسة أمور:</strong> الصلاة فرضًا أو نفلًا حتى صلاة الجنازة؛ والطواف بالبيت؛ ومس المصحف مباشرة باليد؛ والبقاء في المسجد (أما مجرد المرور فلا بأس)؛ وقراءة القرآن (ويُستثنى من ذلك الحائض والنفساء فيجوز لهما القراءة بدون مس المصحف).</div>
+      </details>
+    </section>
+
+    <section class="card" id="arkan">
+      <div class="kicker">الفصل الأول • النوع الثاني</div>
+      <h2><span class="num">2</span> أركان الصلاة الأربعة عشر</h2>
+      <p class="subtitle">أجزاء الصلاة الأساسية التي لا تسقط عمدًا ولا سهوًا</p>
+      <div class="alert amber">📌 <strong>قاعدة الأركان:</strong> من ترك ركنًا عمدًا أو سهوًا لم تصح صلاته، ولا يُجبر بسجود السهو، بل لا بد من الإتيان به.</div>
+      <div class="grid">
+        <div class="item"><h3><span class="n">1</span> القيام في الفرض مع القدرة</h3><p>أما النافلة فيجوز الجلوس مع القدرة وله نصف الأجر.</p></div>
+        <div class="item"><h3><span class="n">2</span> تكبيرة الإحرام</h3><p>وهي «الله أكبر» لا تنعقد الصلاة إلا بها.</p></div>
+        <div class="item"><h3><span class="n">3</span> قراءة الفاتحة</h3><p>للإمام والمنفرد في كل ركعة.</p></div>
+        <div class="item"><h3><span class="n">4</span> الركوع</h3><p>بانحناء الظهر مع القدرة.</p></div>
+        <div class="item"><h3><span class="n">5</span> الرفع من الركوع</h3><p>والاعتدال بعده.</p></div>
+        <div class="item"><h3><span class="n">6</span> الاعتدال بعد الركوع</h3><p>قائمًا مطمئنًا.</p></div>
+        <div class="item"><h3><span class="n">7</span> السجود</h3><p>وهو ركن بإجماع العلماء.</p></div>
+        <div class="item"><h3><span class="n">8</span> الرفع من السجود</h3><p>والاعتدال بعده.</p></div>
+        <div class="item"><h3><span class="n">9</span> الجلسة بين السجدتين</h3><p>مطمئنًا.</p></div>
+        <div class="item"><h3><span class="n">10</span> الجلوس للتشهد الأخير</h3><p>في الصلاة الثلاثية والرباعية والثنائية.</p></div>
+        <div class="item"><h3><span class="n">11</span> قراءة التشهد الأخير</h3><p>وهو: «التحيات لله والصلوات والطيبات، السلام عليك أيها النبي ورحمة الله وبركاته، السلام علينا وعلى عباد الله الصالحين، أشهد أن لا إله إلا الله وأشهد أن محمدًا عبده ورسوله».</p></div>
+        <div class="item"><h3><span class="n">12</span> التسليمة الأولى</h3><p>وهي «السلام عليكم ورحمة الله».</p></div>
+        <div class="item"><h3><span class="n">13</span> الطمأنينة في جميع الأركان</h3><p>وهي السكون بقدر الذكر الواجب.</p></div>
+        <div class="item"><h3><span class="n">14</span> الترتيب بين الأركان</h3><p>كما وردت عن النبي ﷺ.</p></div>
+      </div>
+    </section>
+
+    <section class="card" id="wajibat">
+      <div class="kicker">الفصل الأول • النوع الثالث</div>
+      <h2><span class="num">3</span> واجبات الصلاة</h2>
+      <p class="subtitle">أقوال وأفعال لازمة، ليست بمرتبة الأركان — تسقط سهوًا وتُجبر بسجود السهو، وتبطل الصلاة بتركها عمدًا</p>
+      <div class="grid">
+        <div class="item"><h3><span class="n">1</span> جميع التكبيرات غير تكبيرة الإحرام</h3><p>وتسمى تكبيرات الانتقال. (مع ملاحظة وجود تكبيرات غير واجبة مثل تكبيرة الركوع لمن جاء والإمام راكع، والتكبيرات الزوائد في العيد).</p></div>
+        <div class="item"><h3><span class="n">2</span> قراءة الفاتحة للمأموم</h3><p>فيما لا يجهر فيه الإمام.</p></div>
+        <div class="item"><h3><span class="n">3</span> «سبحان ربي العظيم» في الركوع</h3><p>ويُجزئ عنه كل ما ثبت عن النبي ﷺ من الذكر في الركوع.</p></div>
+        <div class="item"><h3><span class="n">4</span> «سمع الله لمن حمده»</h3><p>في الرفع من الركوع، للإمام والمنفرد.</p></div>
+        <div class="item"><h3><span class="n">5</span> «ربنا ولك الحمد»</h3><p>في الاعتدال من الركوع، للإمام والمأموم والمنفرد.</p></div>
+        <div class="item"><h3><span class="n">6</span> السجود على الأعضاء السبعة</h3><p>وهي: الجبهة مع الأنف، والكفان، والركبتان، وأطراف القدمين.</p></div>
+        <div class="item"><h3><span class="n">7</span> «سبحان ربي الأعلى» في السجود</h3><p>ويُجزئ عنه كل ما ثبت عنه ﷺ من ذكر السجود.</p></div>
+        <div class="item"><h3><span class="n">8</span> التشهد الأول</h3><p>والجلوس له.</p></div>
+        <div class="item"><h3><span class="n">9</span> الجلوس للتشهد الأول</h3><p>في الثلاثية والرباعية.</p></div>
+        <div class="item"><h3><span class="n">10</span> الصلاة على النبي ﷺ في التشهد الأخير</h3><p>والقدر الواجب: «اللهم صل على محمد». وصفتها الكاملة: «اللهم صل على محمد وعلى آل محمد كما صليت على إبراهيم وعلى آل إبراهيم إنك حميد مجيد، اللهم بارك على محمد وعلى آل محمد كما باركت على إبراهيم وعلى آل إبراهيم إنك حميد مجيد».</p></div>
+      </div>
+    </section>
+
+    <section class="card" id="sunan">
+      <div class="kicker">الفصل الثاني • ما يُشرع من غير إلزام</div>
+      <h2><span class="num">4</span> سنن الصلاة القولية والفعلية</h2>
+      <p class="subtitle">من فعلها أُجر، ومن تركها فلا شيء عليه وصلاته صحيحة</p>
+      <h3>أ) السنن القولية — منها:</h3>
+      <div class="grid">
+        <div class="item"><h3><span class="n">1</span> دعاء الاستفتاح</h3><p>بعد تكبيرة الإحرام مباشرة في السرية والجهرية. أشهر صيغتين: «اللهم باعد بيني وبين خطاياي كما باعدت بين المشرق والمغرب…» و«سبحانك اللهم وبحمدك، وتبارك اسمك، وتعالى جدك، ولا إله غيرك».</p></div>
+        <div class="item"><h3><span class="n">2</span> الاستعاذة والبسملة</h3><p>يقرؤهما سرًا قبل الفاتحة: «أعوذ بالله من الشيطان الرجيم» و«بسم الله الرحمن الرحيم»، ولا يجهر بهما.</p></div>
+        <div class="item"><h3><span class="n">3</span> التأمين</h3><p>قول «آمين» بعد قراءة الفاتحة.</p></div>
+        <div class="item"><h3><span class="n">4</span> قراءة ما تيسر من القرآن</h3><p>بعد الفاتحة في الركعتين الأولى والثانية في جميع الصلوات، وفي الثالثة والرابعة من الظهر أحيانًا.</p></div>
+        <div class="item"><h3><span class="n">5</span> الزيادة على الواحدة في التسبيح</h3><p>في الركوع والسجود.</p></div>
+        <div class="item"><h3><span class="n">6</span> دعاء الرفع من الركوع</h3><p>«ملء السماوات وملء الأرض وملء ما شئت من شيء بعد، أهل الثناء والمجد، أحق ما قال العبد وكلنا لك عبد…» للإمام والمأموم والمنفرد.</p></div>
+        <div class="item"><h3><span class="n">7</span> الإكثار من الدعاء في السجود</h3><p>قال ﷺ: «أقرب ما يكون العبد من ربه وهو ساجد فأكثروا الدعاء».</p></div>
+        <div class="item"><h3><span class="n">8</span> «رب اغفر لي» بين السجدتين</h3><p>على قول جمهور الفقهاء هو سنة (لعدم ثبوت ما يدل على وجوبه).</p></div>
+        <div class="item"><h3><span class="n">9</span> الدعاء في التشهد الأخير</h3><p>بعد الصلاة على النبي ﷺ: «اللهم إني أعوذ بك من عذاب جهنم، ومن عذاب القبر، ومن فتنة المحيا والممات، ومن شر فتنة المسيح الدجال».</p></div>
+        <div class="item"><h3><span class="n">10</span> الدعاء بخيري الدنيا والآخرة</h3><p>في نهاية التشهد الأخير بما شئت.</p></div>
+        <div class="item"><h3><span class="n">11</span> التسليمة الثانية</h3><p>على قول جمهور الفقهاء.</p></div>
+      </div>
+      <h3 style="margin-top:1.2rem">ب) السنن الفعلية — منها:</h3>
+      <ol class="steps">
+        <li><strong>رفع اليدين</strong> حذو المنكبين (أحيانًا) أو حذو الأذنين، في أربعة مواضع فقط: مع تكبيرة الإحرام، وعند الركوع، وعند الرفع منه، وبعد القيام من التشهد الأول إلى الثالثة.</li>
+        <li><strong>وضع اليد اليمنى على اليسرى</strong> على أسفل الصدر أو تحته وأعلى السرة أثناء القيام، وأحيانًا القبض، وأحيانًا وضع اليمنى على ذراع اليسرى.</li>
+        <li><strong>خفض الرأس وعدم المبالغة، والنظر إلى موضع السجود</strong> أثناء القيام، وجعل اليدين على الركبتين أثناء الركوع.</li>
+        <li><strong>تفريج أصابع اليدين</strong> حين وضعهما على الركبتين في الركوع كالقابض عليهما (وهو الموضع الوحيد الذي يُسن فيه التفريج).</li>
+        <li><strong>مجافاة العضدين عن الجنبين</strong> أثناء الركوع مع تقويس اليدين قليلًا، ومجافاة العضدين عن الجنبين والبطن عن الفخذين أثناء السجود.</li>
+        <li><strong>بسط الكفين في السجود</strong> حذو المنكبين (أحيانًا) وحذو الأذنين (أحيانًا)، وبسط الظهر أثناء الركوع فلا منخفض ولا مرتفع، واعتدال الرأس مساويًا للظهر.</li>
+        <li><strong>ضم أصابع اليدين أثناء السجود</strong> وجعلها إلى جهة القبلة (وهو الموضع الوحيد الذي يُسن فيه الضم)، ورفع الساعدين عن الأرض.</li>
+        <li><strong>الافتراش</strong> في جميع جلسات الصلاة إلا التشهد الأخير من الثلاثية والرباعية: نصب القدم اليمنى جاعلًا أصابعها للقبلة، وافتراش اليسرى والجلوس عليها.</li>
+        <li><strong>التورك</strong> في التشهد الأخير من الثلاثية والرباعية: نصب اليمنى وجعل اليسرى تحت ساق اليمنى وإخراجها من جهة اليمين والجلوس على المقعدة معتمدًا على الورك الأيسر.</li>
+        <li><strong>وضع الكفين على الفخذين أو الركبتين</strong> مبسوطتين أثناء الجلوس، وقبض الخنصر والبنصر من اليمنى والتحليق بالوسطى مع الإبهام ورفع السبابة أثناء التشهد (وأحيانًا قبض الجميع والإشارة بالسبابة).</li>
+        <li><strong>الخشوع في الصلاة:</strong> خشوع القلب (وهو لب الصلاة وروحها) بأن يعقل المصلي صلاته ولا ينصرف قلبه عنها، وأعلاه التدبر والتفكر والوقوف بين يدي الرب وتعظيمه — ويحتاج إلى مجاهدة وتربية حتى يعتاده. وخشوع الجوارح بإسكانها وترك كل حركة خارجة عن الصلاة. ومما يعين على الخشوع: البكاء.</li>
+        <li><strong>إطالة القيام بعد الرفع من الركوع</strong> (أحيانًا)، <strong>وإطالة الجلوس بين السجدتين</strong> (أحيانًا).</li>
+        <li><strong>الالتفات بالتسليمتين:</strong> يمينًا حتى يُرى بياض خده الأيمن في الأولى، ويسارًا حتى يُرى بياض خده الأيسر في الثانية.</li>
+      </ol>
+    </section>
+
+    <section class="card" id="manhi">
+      <div class="kicker">الفصل الثالث • ما يُنهى عنه</div>
+      <h2><span class="num">5</span> المنهي عنه في الصلاة</h2>
+      <p class="subtitle">ثلاثة أنواع: مكروهات، ومحرمات لا تُبطل، ومبطلات</p>
+      <h3>النوع الأول: مكروهات الصلاة (يُنهى عنها من غير تحريم) — منها:</h3>
+      <div class="grid">
+        <div class="item"><h3><span class="n">1</span> الالتفات بالوجه</h3><p>لغير حاجة.</p></div>
+        <div class="item"><h3><span class="n">2</span> التلثم على الفم والأنف</h3><p>لغير حاجة.</p></div>
+        <div class="item"><h3><span class="n">3</span> افتراش الذراعين في السجود</h3><p>كافتراش الكلب.</p></div>
+        <div class="item"><h3><span class="n">4</span> قراءة القرآن في الركوع والسجود</h3><p>إلا أن يكون دعاءً.</p></div>
+        <div class="item"><h3><span class="n">5</span> العبث</h3><p>وهو الحركة اليسيرة لغير حاجة مما ينافي الخشوع والاطمئنان: كالعبث بالساعة والثوب والغترة واللحية وفرقعة الأصابع وتشبيكها.</p></div>
+        <div class="item"><h3><span class="n">6</span> الصلاة مدافعًا للأخبثين</h3><p>وهما البول والغائط، أو بحضرة طعام يشتهيه.</p></div>
+      </div>
+      <h3 style="margin-top:1rem">النوع الثاني: محرمات لا تُبطل الصلاة — منها:</h3>
+      <div class="grid">
+        <div class="item"><h3><span class="n">1</span> رفع البصر إلى السماء</h3><p>وقيل مكروه، والأصح التحريم للنهي الشديد عنه.</p></div>
+        <div class="item"><h3><span class="n">2</span> كشف المنكبين</h3><p>كليهما في الصلاة.</p></div>
+        <div class="item"><h3><span class="n">3</span> المرور بين يدي المصلي</h3><p>وترك السترة مع القدرة عليها.</p></div>
+        <div class="item"><h3><span class="n">4</span> الصلاة في ثوب فيه صور ذوات الأرواح</h3><p></p></div>
+      </div>
+      <h3 style="margin-top:1rem">النوع الثالث: مبطلات الصلاة — منها:</h3>
+      <div class="alert red">⛔ <strong>تنبيه:</strong> هذه الأعمال تُفسد الصلاة وتوجب إعادتها.</div>
+      <div class="grid">
+        <div class="item"><h3><span class="n">1</span> الأكل والشرب عمدًا</h3><p></p></div>
+        <div class="item"><h3><span class="n">2</span> الكلام الخارج عن الصلاة عمدًا</h3><p></p></div>
+        <div class="item"><h3><span class="n">3</span> الضحك والقهقهة</h3><p></p></div>
+        <div class="item"><h3><span class="n">4</span> ترك ركن أو واجب عمدًا</h3><p></p></div>
+        <div class="item"><h3><span class="n">5</span> زيادة ركن أو ركعة عمدًا</h3><p></p></div>
+        <div class="item"><h3><span class="n">6</span> السلام قبل تمام الصلاة عمدًا</h3><p></p></div>
+        <div class="item"><h3><span class="n">7</span> مسابقة الإمام بالسلام عمدًا</h3><p></p></div>
+        <div class="item"><h3><span class="n">8</span> الحركة الكثيرة المتوالية</h3><p>من غير جنس الصلاة لغير حاجة.</p></div>
+        <div class="item"><h3><span class="n">9</span> الإتيان بما ينافي شرطًا</h3><p>كانتقاض الوضوء، وكشف العورة، والانحراف عن القبلة لغير ضرورة، وقطع النية.</p></div>
+        <div class="item"><h3><span class="n">10</span> الإخلال بترتيب الصلاة عمدًا</h3><p></p></div>
+      </div>
+    </section>
+
+    <section class="card" id="adhkar">
+      <div class="kicker">الفصل الرابع • افهم ما تقول</div>
+      <h2><span class="num">6</span> معاني أذكار الصلاة</h2>
+      <p class="subtitle">من أعظم ما يعين على الخشوع: فهم معاني ما تقرؤه وتقوله</p>
+
+      <details open>
+        <summary>أولًا: معنى دعاء الاستفتاح «سبحانك اللهم وبحمدك…»</summary>
+        <p><strong>«سبحانك اللهم وبحمدك»:</strong> تنزيه الله عما لا يليق به، مقرونًا بحمده. والحمد: هو الشكر بالقول، وأصله «الحمد لله»، ويدخل فيه كل مدح وثناء على الله باللسان بذكر أسمائه الحسنى وصفاته العلا ونعمه التي لا تُحصى.</p>
+        <p><strong>«وتبارك اسمك»:</strong> كثُرت بركة اسمك، والبركة: الخير الكثير النامي المستمر الدائم. فالله تعالى هو المبارِك في نفسه، المبارَك الذي يُنال بذكره الخير الكثير. ولا يُقال (تبارك) لغير الله.</p>
+        <p><strong>«وتعالى جدك»:</strong> ارتفعت عظمتك.</p>
+        <p><strong>«ولا إله غيرك»:</strong> لا معبود بحق سواك يا الله.</p>
+      </details>
+
+      <details open>
+        <summary>ثانيًا: معنى الاستعاذة والبسملة</summary>
+        <p><strong>«أعوذ بالله من الشيطان الرجيم»:</strong> ألوذ وألتجئ وأعتصم بالله وحده لا شريك له من إبليس المطرود المبعد عن رحمة الله، الذي لا يضر ولا ينفع في ديني ودنياي.</p>
+        <p><strong>«بسم الله»:</strong> أقرأ مستعينًا بالله متبركًا باسمه. و(الله): علم على الذات الإلهية، ومعناه المألوه المعبود ذو الألوهية والعبودية على خلقه أجمعين، المستحق لإفراده بالعبادة لما اتصف به من صفات الألوهية والكمال.</p>
+        <p><strong>«الرحمن»:</strong> اسم من أسماء الله، ومعناه ذو الرحمة الواسعة العظيمة التي وسعت كل شيء وعمت كل مخلوق.</p>
+        <p><strong>«الرحيم»:</strong> اسم من أسماء الله، ومعناه ذو الرحمة العظيمة التي يخص بها عباده المؤمنين بما يوصل لهم من الهداية والنعيم في الدنيا والآخرة. قال تعالى: ﴿ وَكَانَ بِالْمُؤْمِنِينَ رَحِيمًا ﴾.</p>
+        <div class="alert green">ℹ️ البسملة آية من القرآن الكريم، وليست من سورة الفاتحة، تُستفتح بها جميع السور ما عدا سورة التوبة.</div>
+      </details>
+
+      <details open>
+        <summary>ثالثًا: معنى سورة الفاتحة آية آية</summary>
+        <p><strong>﴿ الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ ﴾:</strong> الحمد: هو الثناء الكامل والمدح المطلق لله وحده لا شريك له. والرب: هو المربي لجميع العالمين — وهم كل ما سوى الله من الجن والإنس وغيرهم — بخلقه لهم وإنعامه عليهم بجميع النعم العامة والخاصة.</p>
+        <p><strong>﴿ الرَّحْمَٰنِ الرَّحِيمِ ﴾:</strong> اسمان من أسماء الله، ومعناهما أن الله ذو الرحمة الواسعة العظيمة. والرحمن أوسع معنى من الرحيم: فرحمة الرحمن تشمل جميع الخلائق، ورحمة الرحيم تختص بعباده المؤمنين.</p>
+        <p><strong>﴿ مَالِكِ يَوْمِ الدِّينِ ﴾:</strong> المالك هو الذي له الملك المطلق الكامل، المتصرف في خلقه بما يشاء. ويوم الدين: يوم الجزاء والحساب وهو يوم القيامة. وأُضيف الملك إليه لأنه في ذلك اليوم يظهر للخلق كمال ملك الله وتنقطع أملاك الخلائق. قال تعالى: ﴿ لِمَنِ الْمُلْكُ الْيَوْمَ ۖ لِلَّهِ الْوَاحِدِ الْقَهَّارِ ﴾.</p>
+        <p><strong>﴿ إِيَّاكَ نَعْبُدُ ﴾:</strong> لا نصرف شيئًا من العبادة إلا لك وحدك لا شريك لك. والعبادة: اسم جامع لكل ما يحبه الله ويرضاه من الأقوال والأعمال الباطنة والظاهرة.</p>
+        <p><strong>﴿ وَإِيَّاكَ نَسْتَعِينُ ﴾:</strong> لا نطلب العون إلا منك وحدك لا شريك لك. والاستعانة: طلب العون من الله في قضاء الحاجات وتفريج الكربات، وإتمام المأمورات وترك المحظورات والصبر على المقدورات.</p>
+        <p><strong>﴿ اهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ ﴾:</strong> دُلنا وأرشدنا ووفقنا إلى الطريق الواضح الموصل إلى الله وإلى جنته. ثم زاد هذا الصراط بيانًا بذكر حال السالكين له والمعرضين عنه:</p>
+        <ul class="clean">
+          <li><strong>﴿ صِرَاطَ الَّذِينَ أَنْعَمْتَ عَلَيْهِم ﴾:</strong> بهدايتهم وتوفيقهم، وهم: النبيون والصديقون والشهداء والصالحون.</li>
+          <li><strong>﴿ غَيْرِ الْمَغْضُوبِ عَلَيْهِمْ ﴾:</strong> الذين عرفوا الحق وتركوه استكبارًا وجحودًا، وعلى رأسهم اليهود.</li>
+          <li><strong>﴿ وَلَا الضَّالِّينَ ﴾:</strong> الذين ضلوا عن الصراط وتركوا الحق جهلًا بسبب إعراضهم عن الهدى والعلم، وعلى رأسهم النصارى.</li>
+        </ul>
+      </details>
+
+      <details open>
+        <summary>رابعًا: معنى التشهد</summary>
+        <p><strong>«التحيات لله»:</strong> التحيات: جمع تحية، وهي التعظيم بها. والمراد: التحيات التي تُفعل عظيمةً لله على سبيل الحياء، فالمستحق لها هو الله وحده، ولهذا جُمعت بـ(ال) التي تفيد الاستغراق. فلا يجوز صرف شيء منها لغير الله، سواء أكانت فعلية كالانحناء والركوع والسجود، أم لفظية مثل: يا مالك الملوك ويا قاهر الجبابرة ويا ذا الملكوت.</p>
+        <p><strong>«والصلوات»:</strong> جميع الصلوات فرضها ونفلها لا تكون إلا لله، فيجب إخلاصها له. وخُصت بالذكر للاهتمام بها ولأن العبد يقول هذا الذكر في صلاته فيستحضر إخلاصها لله.</p>
+        <p><strong>«والطيبات»:</strong> كل عمل صالح طيب يحبه الله قولًا أو فعلًا أو اعتقادًا، وأنه يجب إخلاصها لله، وهذا من ذكر العام بعد الخاص.</p>
+        <p><strong>«السلام عليك أيها النبي ورحمة الله وبركاته»:</strong> دعاء للنبي ﷺ من الله أن يُسلِّمه من كل سوء في الدنيا والآخرة. وقُدم النبي ﷺ في الذكر لشرفه. ولا يُدعى على الله، فلا يُقال: السلام على الله فإن الله هو السلام.</p>
+        <p><strong>«السلام علينا وعلى عباد الله الصالحين»:</strong> دعاء للحاضرين بالسلامة من كل سوء في الدنيا والآخرة — والمصلي والحاضرون والإمام والمأمومون والملائكة الذين يشهدون الصلاة — ثم لغير الحاضرين من الصالحين رجالًا ونساءً. والصالح: هو المستقيم على طاعة الله القائم بما عليه من حقوق الله وحقوق عباده.</p>
+        <p><strong>«أشهد أن لا إله إلا الله»:</strong> أُقر وأُوقن وأعترف أنه لا معبود بحق إلا الله وحده لا شريك له، وأُبطل كل معبود سواه.</p>
+        <p><strong>«وأشهد أن محمدًا عبده ورسوله»:</strong> أُقر وأُوقن بأنه رسول الله أُرسل إلى جميع الثقلين الإنس والجن، وأنه خاتم الأنبياء والمرسلين. وجُمع له بين الوصفين (العبودية والرسالة) ليُعلم أنه عبد لا يُكذَّب بل يُطاع ويُتبع، ورسول لا يُغلى فيه.</p>
+      </details>
+    </section>
+
+    <section class="card" id="khatima">
+      <div class="kicker">الخاتمة</div>
+      <h2><span class="num">✓</span> تم بحمد الله + تحميل الكتاب</h2>
+      <p>نسأل الله تعالى أن ينفع به جميع المسلمين، وأن يكتب له القبول، وأن يغفر للمؤلف ولوالديه وزوجه وولده وشيوخه وتلاميذه وجميع المسلمين. وصلى الله وسلم على المبعوث رحمة للعالمين وعلى آله وصحبه أجمعين.</p>
+      <div style="display:flex; gap:.6rem; flex-wrap:wrap; margin-top:1rem">
+        <a class="btn primary" href="book.html">📖 قراءة PDF الأصل</a>
+        <a class="btn" href="./wagizsalat.pdf" download="الوجيز-في-أحكام-الصلاة.pdf">📥 تحميل مباشر</a>
+        <button class="btn" onclick="window.print()">🖨️ طباعة الملخص</button>
+        <a class="btn" href="#intro">⬆️ العودة للبداية</a>
+      </div>
+      <p class="print-note" style="margin-top:1rem">أُعدّ هذا الموقع لسهولة القراءة والمراجعة السريعة. عند التعارض يُرجع إلى نص الكتاب الأصل (PDF). كتبه الفقير إلى الله: عبد الرحمن بن فهد الودعان الدوسري — awadaan@gmail.com</p>
+      <div id="noResult" style="display:none" class="alert amber">لا توجد نتائج مطابقة لبحثك. جرّب كلمة أخرى.</div>
+    </section>
+
+  </main>
+</div>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div>
+      <strong style="color:#fff; font-size:1.1rem">الوجيز في أحكام الصلاة</strong><br>
+      عرض ويب مبسط ومرتب لكتاب الشيخ عبد الرحمن بن فهد الودعان الدوسري — لسهولة القراءة والتعلم والمراجعة.
+      <div style="margin-top:.7rem; font-size:.9rem">الأقسام: الشروط • الأركان • الواجبات • السنن • المكروهات والمبطلات • معاني الأذكار</div>
+    </div>
+    <div style="text-align:left">
+      <div>شبكة الألوكة — www.alukah.net</div>
+      <div style="margin-top:.5rem"><a href="book.html" style="color:#ffe9a8">نسخة PDF الأصلية (قراءة + تحميل)</a></div>
+    </div>
+  </div>
+</footer>
+
+<div class="fab">
+  <button onclick="window.scrollTo({top:0,behavior:'smooth'})" title="للأعلى">⬆️</button>
+</div>
+
+<script>
+// progress + active nav + search
+const prog = document.getElementById('progress');
+addEventListener('scroll', ()=>{
+  const h = document.documentElement;
+  const p = h.scrollTop / (h.scrollHeight - h.clientHeight) * 100;
+  prog.style.width = p + '%';
+  const links = document.querySelectorAll('#sideNav a');
+  let cur = '';
+  document.querySelectorAll('.card[id]').forEach(s=>{
+    if(scrollY >= s.offsetTop - 140) cur = s.id;
+  });
+  links.forEach(a=>a.classList.toggle('active', a.getAttribute('href')==='#'+cur));
+},{passive:true});
+
+const q = document.getElementById('q');
+const noResult = document.getElementById('noResult');
+q.addEventListener('input', ()=>{
+  const v = q.value.trim();
+  document.querySelectorAll('.card').forEach(c=>c.querySelectorAll('mark').forEach(m=>m.replaceWith(document.createTextNode(m.textContent))));
+  if(!v){ document.querySelectorAll('.item,.card p,.card li').forEach(el=>el.style.display=''); noResult.style.display='none'; return; }
+  let found = 0;
+  // highlight
+  document.querySelectorAll('#mainContent .card').forEach(card=>{
+    const text = card.textContent;
+    if(text.includes(v)){ card.style.display=''; found++;
+      // simple highlight inside items
+      card.querySelectorAll('p,li,h3,summary').forEach(el=>{
+        if(el.textContent.includes(v) && !el.querySelector('mark')){
+          el.innerHTML = el.innerHTML.split(v).join('<mark>'+v+'</mark>');
+        }
+      });
+    } else { card.style.display='none'; }
+  });
+  noResult.style.display = found ? 'none' : 'block';
+  if(found) noResult.style.display='none';
+});
+</script>
+</body>
+</html>

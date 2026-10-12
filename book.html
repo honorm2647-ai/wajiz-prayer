@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>قراءة الكتاب PDF | الوجيز في أحكام الصلاة</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;800&family=Amiri:wght@700&display=swap" rel="stylesheet">
+<style>
+:root{--brand:#0f6e5e;--line:#e8e2d3;--bg:#f7f5ef}
+*{box-sizing:border-box}body{margin:0;font-family:'Tajawal',sans-serif;background:var(--bg);line-height:1.9;color:#1e2a26}
+.topbar{position:sticky;top:0;background:rgba(255,255,255,.95);border-bottom:1px solid var(--line);z-index:10}
+.topbar-inner{max-width:1100px;margin:auto;padding:.7rem 1.2rem;display:flex;align-items:center;gap:.7rem}
+.logo{width:42px;height:42px;border-radius:13px;display:grid;place-items:center;background:linear-gradient(135deg,#0f6e5e,#14957e);color:#fff;font-weight:800}
+.btn{border:1px solid var(--line);background:#fff;border-radius:999px;padding:.5rem 1rem;font-family:inherit;font-weight:700;color:var(--brand);text-decoration:none;display:inline-block;cursor:pointer}
+.btn.primary{background:var(--brand);color:#fff;border-color:var(--brand)}
+.wrap{max-width:1100px;margin:auto;padding:1.2rem}
+.card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:1.2rem;box-shadow:0 10px 30px rgba(15,110,94,.08)}
+h1{font-family:'Amiri',serif;margin:.3rem 0}
+.viewer{width:100%;height:75vh;border:1px solid var(--line);border-radius:12px;background:#eee}
+.row{display:flex;gap:.6rem;flex-wrap:wrap;margin:.8rem 0}
+.note{background:#fdf6e3;border:1px solid #f0dfae;border-radius:12px;padding:.8rem 1rem;font-size:.95rem}
+</style>
+</head>
+<body>
+<div class="topbar"><div class="topbar-inner">
+<div class="logo">ص</div><div><b>الوجيز في أحكام الصلاة</b><br><small style="color:#6b7a75">قراءة نسخة PDF الأصلية</small></div>
+<div style="margin-inline-start:auto;display:flex;gap:.5rem">
+<a class="btn" href="index.html">🏠 الرئيسية</a>
+<a class="btn" href="quiz.html">📝 الاختبار</a>
+</div></div></div>
+<div class="wrap"><div class="card">
+<h1>📖 نسخة PDF الأصلية</h1>
+<p style="color:#6b7a75;margin-top:0">إذا لم يظهر الملف داخل الصفحة، استخدم زر الفتح أو التحميل بالأسفل.</p>
+<div class="row">
+<a class="btn primary" href="./wagizsalat.pdf" target="_blank" rel="noopener">↗ فتح PDF في تبويب جديد</a>
+<a class="btn" href="./wagizsalat.pdf" download="الوجيز-في-أحكام-الصلاة.pdf">📥 تحميل PDF</a>
+</div>
+<object class="viewer" data="./wagizsalat.pdf" type="application/pdf">
+<iframe class="viewer" src="./wagizsalat.pdf" title="الوجيز في أحكام الصلاة PDF"></iframe>
+</object>
+<div class="note" style="margin-top:1rem">💡 ملاحظة: بعض المتصفحات تمنع فتح الملف داخل المعاينة المضمّنة — في هذه الحالة اضغط <b>فتح PDF في تبويب جديد</b> أو <b>تحميل PDF</b> وسيعمل مباشرة لأن الملف موجود بجانب الصفحة باسم <code>wagizsalat.pdf</code>.</div>
+</div></div>
+</body>
+</html>
