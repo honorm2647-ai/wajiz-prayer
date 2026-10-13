@@ -228,5 +228,46 @@ if(/\/(login|signin|oauth|auth)(\/|$|\?)/i.test(location.pathname))return;
 window.addEventListener('load',function(){navigator.serviceWorker.register('./sw.js',{scope:'./'}).catch(function(e){console.warn('SW register failed:',e);});});
 }catch(e){}})();
 </script>
+<div id="installPopup" class="install-popup" hidden>
+  <div class="install-card">
+    <img src="./icons/icon-192.png" alt="أيقونة تطبيق الوجيز" width="52" height="52">
+    <div class="install-text"><b>حمّل الموقع كتطبيق 📲</b><span>ثبّت الوجيز على هاتفك وتصفحه دون اتصال</span></div>
+    <div class="install-actions">
+      <button id="installBtn" class="install-go">تثبيت</button>
+      <button id="installLater" class="install-later">لاحقًا</button>
+    </div>
+    <div id="iosHint" class="install-ios" hidden>على آيفون: زر المشاركة ← إضافة إلى الشاشة الرئيسية</div>
+  </div>
+</div>
+<style>
+.install-popup{position:fixed;bottom:14px;inset-inline:14px;z-index:80;transform:translateY(20px);opacity:0;transition:opacity .3s,transform .3s}
+.install-popup.show{transform:none;opacity:1}
+.install-card{background:#fff;border:1px solid #e8e2d3;border-radius:16px;box-shadow:0 14px 40px rgba(0,0,0,.22);padding:.8rem 1rem;display:flex;gap:.8rem;align-items:center;flex-wrap:wrap;max-width:640px;margin:auto}
+.install-card img{border-radius:14px;flex-shrink:0}
+.install-text{display:flex;flex-direction:column;line-height:1.7;flex:1;min-width:180px}
+.install-text span{color:#6b7a75;font-size:.88rem}
+.install-actions{display:flex;gap:.5rem}
+.install-go{background:#0f6e5e;color:#fff;border:0;border-radius:999px;padding:.55rem 1.3rem;font-family:inherit;font-weight:800;cursor:pointer}
+.install-later{background:#fff;color:#0f6e5e;border:1px solid #e8e2d3;border-radius:999px;padding:.55rem 1rem;font-family:inherit;font-weight:700;cursor:pointer}
+.install-ios{flex-basis:100%;background:#fdf6e3;border:1px solid #f0dfae;border-radius:10px;padding:.4rem .8rem;font-size:.88rem}
+</style>
+<script>
+(function(){try{
+var KEY='wagiz-install-dismissed-v1';
+function dismissedRecently(){try{var t=+localStorage.getItem(KEY)||0;return Date.now()-t<7*24*3600*1000;}catch(e){return false;}}
+function isStandalone(){return (window.matchMedia&&window.matchMedia('(display-mode: standalone)').matches)||window.navigator.standalone===true;}
+if(isStandalone()||dismissedRecently())return;
+var isIOS=/iphone|ipad|ipod/i.test(navigator.userAgent||'');
+var popup=document.getElementById('installPopup'),btn=document.getElementById('installBtn'),later=document.getElementById('installLater'),hint=document.getElementById('iosHint');
+var deferred=null;
+function show(iosMode){popup.hidden=false;requestAnimationFrame(function(){popup.classList.add('show');});if(iosMode){btn.style.display='none';hint.hidden=false;}}
+function hide(save){popup.classList.remove('show');setTimeout(function(){popup.hidden=true;},300);if(save){try{localStorage.setItem(KEY,String(Date.now()));}catch(e){}}}
+if(btn)btn.addEventListener('click',function(){if(deferred){deferred.prompt();deferred.userChoice.then(function(){hide(true);deferred=null;});}else{hide(true);}});
+if(later)later.addEventListener('click',function(){hide(true);});
+window.addEventListener('appinstalled',function(){hide(true);});
+if(isIOS){setTimeout(function(){show(true);},2500);return;}
+window.addEventListener('beforeinstallprompt',function(e){e.preventDefault();deferred=e;setTimeout(function(){show(false);},2000);});
+}catch(e){}})();
+</script>
 </body>
 </html>
